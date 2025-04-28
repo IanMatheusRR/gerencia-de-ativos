@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entregáveis BRR</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo_empresa.png" alt="Logo da Empresa" class="logo">
+    <h1>ENTREGÁVEIS EXECUTIVA DE BRR</h1>
+    <button id="voltar" class="back-button">Voltar</button>
+  </header>
+
+  <main class="main-container">
+    <div id="brr-list" class="deliverables-list">
+      <!-- Entregáveis carregados dinamicamente -->
+      <p>Carregando entregáveis...</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/xlsx.mini.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadBRRDeliverables();
+
+      const backButton = document.getElementById('voltar');
+      backButton.addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+    });
+  </script>
+</body>
+</html>
